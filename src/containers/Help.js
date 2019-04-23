@@ -6,7 +6,7 @@ class Help extends Component {
         return (
             <Fragment>
                 <Navbar />
-               
+                <h1>hi</h1>
             </Fragment>    
         )
     }
