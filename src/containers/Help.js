@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from 'react'
 import { Grid, Menu, Segment } from 'semantic-ui-react'
 import Navbar from './Navbar';
+import RoomLogin from '../components/RoomLogin'
+import RoomCreate from './RoomCreate'
 
 class Help extends Component {
 
@@ -9,6 +11,7 @@ class Help extends Component {
     }
 
     handleItemClick = (e, { name }) => {
+        // debugger
         this.setState({ 
             activeItem: name 
         })
@@ -45,10 +48,20 @@ class Help extends Component {
                             />
                         </Menu>
                     </Grid.Column>
-                    <Grid.Column stretched width={14}>
+                    <Grid.Column stretched width={12}>
                         <Segment>
-                            This is an stretched grid column. This segment will always match the tab height
+                        {this.state.activeItem === 'Join the room'?
+                            <RoomLogin />
+                        :null
+                        }
+
+                        {this.state.activeItem === 'Create new room'?
+                            <RoomCreate />
+                        :null
+                        }
+                        
                         </Segment>
+                        
                     </Grid.Column>
                 </Grid>
             </Fragment>    

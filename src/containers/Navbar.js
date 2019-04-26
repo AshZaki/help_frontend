@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import { Menu,} from 'semantic-ui-react'
-import RoomCreate from '../components/RoomCreate'
+import RoomCreate from './RoomCreate'
 import UserLogin from '../components/UserLogin'
 import UserLogout from '../components/UserLogout'
 import Register from '../components/Register'
