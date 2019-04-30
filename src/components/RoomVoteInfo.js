@@ -10,7 +10,7 @@ class RoomVoteInfo extends Component {
                         id='form-input-control-first-name'
                         control={Input}
                         label='Topic'
-                        placeholder='Topic(Room Name)'
+                        placeholder='Topic (Room Name)'
                     />
                     <Form.Field
                         id='form-textarea-control-opinion'

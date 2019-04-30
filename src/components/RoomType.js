@@ -15,5 +15,6 @@ class RoomType extends Component {
         )
     }
 }
+//make sure to move all the whole page to the middle
 
 export default RoomType;
