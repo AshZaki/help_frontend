@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react'
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Checkbox, Form, Modal, Header, Image, } from 'semantic-ui-react'
 
 class UserLogin extends Component {
 
@@ -8,16 +8,16 @@ class UserLogin extends Component {
         password: "",
     }
 
-    onTypingChange = (e, { name, value }) => {
+    onTypingChange = (e) => {
         // debugger
         this.setState({
-            [name]: value 
+            [e.target.name]: e.target.value 
         })
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.onLogin(this.state.username, this.state.password)
+        this.props.onLogIn(this.state.username, this.state.password)
         // e.target.reset
     }
 
@@ -29,18 +29,38 @@ class UserLogin extends Component {
                         <label>Username</label>
                         <input placeholder='Username'
                         name="username"
-                        errorMessage={!this.state.username ? "This field can't be blank!" : null} 
+                         
                         />
                     </Form.Field>
                     <Form.Field>
                         <label>Password</label>
                         <input placeholder='Password' name="password"/>
                     </Form.Field>
-                    <Form.Field>
-                    <Checkbox label= "I Don't have account yet" />
-                    </Form.Field>
                     <Button type='submit'>Login</Button>
                 </Form>
+                    <Modal trigger={<label>I Don't have account yet</label>}>
+                        <Modal.Header>Create new account</Modal.Header>
+                        <Modal.Content image>
+                        {/* <Image wrapped size='medium' src='/images/avatar/large/rachel.png' /> */}
+                        <Modal.Description>
+                        <Form>
+                            <Form.Group widths='equal'>
+                                <Form.Input fluid label='Username' placeholder='username' />
+                                <Form.Input fluid label='Password' placeholder='password' />
+                            </Form.Group>
+                            <Form.Group widths='equal'>
+                                <Form.Input fluid label='First Name' placeholder='First Name' />
+                                <Form.Input fluid label='Last Name' placeholder='Last Name' />
+                            </Form.Group>
+                            <Form.Field>
+                                <label>E-mail</label>
+                                <input placeholder='email' />
+                            </Form.Field>
+                            <Button type='submit'>Create Account</Button>
+                        </Form>
+                        </Modal.Description>
+                        </Modal.Content>
+                    </Modal>
             </Fragment>
         )
     }

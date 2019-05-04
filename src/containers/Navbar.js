@@ -19,7 +19,7 @@ class Navbar extends Component {
 
     render(){
         const { activeItem } = this.state
-
+        let logout = () => {this.props.onLogOut()}
         return (
             <Fragment>
                 <Menu pointing secondary>
@@ -38,7 +38,7 @@ class Navbar extends Component {
                         <Menu.Item
                         name='logout'
                         active={activeItem === 'logout'}
-                        onClick={this.handleItemClick}
+                        onClick={logout}
                         />
                     </Menu.Menu>
                 </Menu>

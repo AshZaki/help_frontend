@@ -22,7 +22,9 @@ class Help extends Component {
 
         return (
             <Fragment>
-                <Navbar />
+                <Navbar 
+                    onLogOut = {this.props.onLogOut}
+                />
                 <Grid>
                     <Grid.Column width={2}>
                         <Menu fluid vertical tabular>
