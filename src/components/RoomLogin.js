@@ -12,10 +12,10 @@ class RoomLogin extends Component {
                         <Form.Group widths='equal'>
                         <Form.Field label='Room Password' control='input' placeholder='Password' />
                         </Form.Group>
-                        <Button type='submit'>Submit</Button>
+                        <Button type='submit'>Join!</Button>
                         <Divider hidden />
                     </Form>
-                
+                // might have to create another component
             </Fragment>
         )
     }

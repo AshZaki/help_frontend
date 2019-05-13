@@ -15,8 +15,8 @@ class RoomVoteInfo extends Component {
                     <Form.Field
                         id='form-textarea-control-opinion'
                         control={TextArea}
-                        label='Detail'
-                        placeholder='Detail'
+                        label='Details'
+                        placeholder='Details'
                     />
                     <Input
                         icon='tags'
