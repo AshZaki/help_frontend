@@ -5,6 +5,8 @@ import Vote from '../components/Vote'
 import Result from '../components/Result'
 
 class RoomContainer extends Component {
+
+  
     render(){
         return (
             <Fragment>
